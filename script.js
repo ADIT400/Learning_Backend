@@ -57,7 +57,7 @@ app.get('/', (req, res) => {
 
 app.listen(3000)*/
 
-const express=require('express');
+/*const express=require('express');
 const app=express();
 
 app.use(function(req,res,next){
@@ -67,10 +67,10 @@ app.use(function(req,res,next){
 
 app.get("/",function(req,res){
     res.send("Hi, Whats up?")
-})
+})*/
 
 /*app.get("/profile",function(req,res){
     res.send("I am Aditya Dangi.")
 })*/
 
-app.listen(3000);
+//app.listen(3000);
