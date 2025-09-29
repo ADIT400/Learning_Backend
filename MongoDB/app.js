@@ -13,6 +13,7 @@ app.get('/create',async(req,res)=>{
         email:"adityadangi1920@gmail.com",
         username:"Aditya"
     })
+    res.send(createduser);
 })
 
 app.listen(3000);
