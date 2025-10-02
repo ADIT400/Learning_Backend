@@ -59,7 +59,7 @@ app.get('/read',async(req,res)=>{
 })
 
 app.get('/edit/:userid',async(req,res)=>{
-    let user=await userModel.findOne({_id: req.params.id});
+    let user=await userModel.findOne({_id: req.params.userid});
     res.render("edit",{user});
 })
 
