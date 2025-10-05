@@ -20,22 +20,16 @@
         <div class="posts mt-20">
             <h3 class="text-zinc-400">Your Posts.</h3>
             <div class="postcontainer mt-5">
+                <% user.posts.reverse().forEach(function(post){%>
                 <div class="post rounded-md w-1/3 mb-4 p-4 border-[1px] border-zinc-700 bg-zinc-800">
-                    <h5 class="text-blue-500 mb-2">@someusername</h5>
-                    <p class="text-sm tracking-tight">checking</p>
+                    <h5 class="text-blue-500 mb-2">@<%= user.username %></h5>
+                    <p class="text-sm tracking-tight"><%= post.content %></p>
                     <div class="btns flex gap-4 mt-5">
                         <a class="text-blue-500" href="">Like</a>
                         <a class="text-zinc-600" href="">Edit</a>
                     </div>
                 </div>
-                <div class="post rounded-md w-1/3 mb-4 p-4 border-[1px] border-zinc-700 bg-zinc-800">
-                    <h5 class="text-blue-500 mb-2">@someusername</h5>
-                    <p class="text-sm tracking-tight">checking</p>
-                    <div class="btns flex gap-4 mt-5">
-                        <a class="text-blue-500" href="">Like</a>
-                        <a class="text-zinc-600" href="">Edit</a>
-                    </div>
-                </div>
+                    <%})%>
             </div>
         </div>
     </div>

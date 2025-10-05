@@ -20,8 +20,7 @@ app.get('/login',(req,res)=>{
 })
 
 app.get('/profile',isLoggedIn,async (req,res)=>{
-    let user=await userModel.findOne({email:req.user.email});
-    console.log(user);
+    let user=await userModel.findOne({email:req.user.email}).populate("posts");
     res.render("profile",{user});
 });
 
