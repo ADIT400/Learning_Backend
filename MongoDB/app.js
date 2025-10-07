@@ -63,6 +63,12 @@ app.get('/edit/:userid',async(req,res)=>{
     res.render("edit",{user});
 })
 
+app.post('/update/:userid',async(req,res)=>{
+    let {name,email,image}=req.body;
+    let user=await userModel.findOneAndUpdate({_id: req.params.userid},{name,email,image},{new:true});
+    res.redirect("/read");
+})
+
 app.get('/delete/:id',async(req,res)=>{
     let users=await userModel.findOneAndDelete({_id: req.params.id});
     res.redirect("/read");
